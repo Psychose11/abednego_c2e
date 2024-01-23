@@ -1,0 +1,6 @@
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
+
+
+openssl genpkey -algorithm RSA -out server-key.pem
+openssl req -new -key server-key.pem -out server-csr.pem
+openssl x509 -req -days 365 -in server-csr.pem -signkey server-key.pem -out server-cert.pem
