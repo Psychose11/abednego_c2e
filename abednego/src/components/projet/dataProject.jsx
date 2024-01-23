@@ -384,11 +384,12 @@ export default function EnhancedTable() {
       const mailMatch = prospecteur.mail.toLowerCase().includes(searchLower);
       const phoneMatch = prospecteur.telephone.toLowerCase().includes(searchLower);
       const nomMatch = prospecteur.nom.toLowerCase().includes(searchLower);
+      const matriculeMatch = prospecteur.matricule.toLowerCase().includes(searchLower);
     
 
       // Utilisez une logique OR pour inclure les lignes correspondant à l'un des critères
       return (
-        usernameMatch || mailMatch || phoneMatch || nomMatch
+        usernameMatch || mailMatch || phoneMatch || nomMatch || matriculeMatch
       );
     });
 
@@ -465,7 +466,7 @@ export default function EnhancedTable() {
                         inputProps={{ "aria-labelledby": labelId }}
                       />
                     </TableCell>
-                    <TableCell align="left">1081 H-F</TableCell>
+                    <TableCell align="left">{prospecteur.matricule}</TableCell>
                     <TableCell align="left">{prospecteur.nom}</TableCell>
                     <TableCell
                       component="th"

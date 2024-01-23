@@ -811,6 +811,7 @@ app.get("/all-member/:token", (req, res) => {
         motDepasse: prospector.motDePasse,
         mail: prospector.mail,
         parcours: prospector.parcours,
+        matricule: prospector.matricule,
         niveau:prospector.niveau,
         telephone: prospector.telephone,
         nom: prospector.nom,
